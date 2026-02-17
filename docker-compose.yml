@@ -1,0 +1,12 @@
+services:
+  browser-sandbox:
+    build: .
+    image: browser-sandbox:latest
+    container_name: browser-sandbox
+    ports:
+      - "8090:8080"
+    environment:
+      - DISPLAY_WIDTH=1280
+      - DISPLAY_HEIGHT=1024
+      - TZ=UTC
+    shm_size: "2gb"
