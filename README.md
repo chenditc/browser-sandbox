@@ -29,6 +29,8 @@ All endpoints are served through a single port (default `8080`):
 
 | Path | Description |
 |------|-------------|
+| `/` | Redirects to `/readme` |
+| `/readme` | Quick usage page with endpoint links + README link |
 | `/v1/ping` | Health check — returns `pong` |
 | `/json` | CDP endpoint list with WebSocket URLs |
 | `/json/version` | Chrome/CDP version info |

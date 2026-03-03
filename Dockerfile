@@ -67,6 +67,7 @@ RUN mkdir -p /etc/opt/chrome/policies/managed \
 
 COPY conf/supervisord.conf  /etc/supervisord.conf
 COPY conf/nginx.conf         /etc/nginx/nginx.conf
+COPY conf/readme.html        /usr/share/nginx/html/readme.html
 COPY conf/entrypoint.sh      /opt/entrypoint.sh
 COPY conf/start-browser.sh   /opt/start-browser.sh
 COPY conf/openbox.xml        /etc/xdg/openbox/rc.xml

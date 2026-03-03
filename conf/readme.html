@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>browser-sandbox usage</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f6f8fb;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #334155;
+      --accent: #0a66c2;
+      --border: #dbe3ee;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: var(--text);
+      background: linear-gradient(180deg, #f6f8fb 0%, #eef3fb 100%);
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+
+    .card {
+      width: min(760px, 100%);
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+      padding: 24px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 28px;
+    }
+
+    p {
+      margin: 0 0 16px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    ul {
+      margin: 0 0 20px;
+      padding-left: 18px;
+      line-height: 1.8;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    code {
+      background: #f1f5f9;
+      padding: 2px 6px;
+      border-radius: 6px;
+      font-size: 0.95em;
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <h1>browser-sandbox</h1>
+    <p>
+      You reached the container root path. Use one of the endpoints below to
+      connect to Chrome, open VNC, or check service health.
+    </p>
+
+    <ul>
+      <li><a href="/v1/ping"><code>/v1/ping</code></a> - health check</li>
+      <li><a href="/json"><code>/json</code></a> - CDP target list</li>
+      <li><a href="/json/version"><code>/json/version</code></a> - CDP version info</li>
+      <li><a href="/vnc/"><code>/vnc/</code></a> - noVNC web viewer</li>
+    </ul>
+
+    <p>
+      Full docs and examples:
+      <a href="https://github.com/chenditc/browser-sandbox#readme" target="_blank" rel="noopener noreferrer">
+        README on GitHub
+      </a>.
+    </p>
+  </main>
+</body>
+</html>
